@@ -211,9 +211,9 @@ with torch.no_grad():
                     print(img_id, 'PSNR', psnr, 'SSIM', ssim)
         img_path = path.join(render_dir, f'{img_id:04d}.png');
         im = im.cpu().numpy()
-        if not args.render_path:
-            im_gt = dset.gt[img_id].numpy()
-            im = np.concatenate([im_gt, im], axis=1)
+        # if not args.render_path:
+        #     im_gt = dset.gt[img_id].numpy()
+        #     im = np.concatenate([im_gt, im], axis=1)
         if not args.timing:
             im = (im * 255).astype(np.uint8)
             if not args.no_imsave:
