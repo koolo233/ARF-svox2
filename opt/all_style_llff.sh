@@ -3,6 +3,7 @@
 usage() {
   echo "Usage: ${0}
         [-i|--gpu_id]
+        [-s|--scenes]
         " 1>&2
   exit 1
 }
@@ -14,6 +15,10 @@ while [[ $# -gt 0 ]];do
       GPU_ID=${2}
       shift 2
       ;;
+    -s|--scenes)
+      SCENEs=${2}
+      shift 2
+      ;;
     *)
       usage
       shift
@@ -21,7 +26,7 @@ while [[ $# -gt 0 ]];do
   esac
 done
 
-datasets=${DATASET:-"trex horns flower fern orchids fortress leaves room"}
+datasets=${SCENEs:-"trex horns flower fern orchids fortress leaves room"}
 
 for SCENE in ${datasets}
 do
