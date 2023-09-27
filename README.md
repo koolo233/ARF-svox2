@@ -15,16 +15,39 @@ Citation:
 }
 ```
 
+## TODO List
+
+- [ ] llff - trex - 0~140 styles
+- [ ] llff - horns - 0~140 styles
+- [ ] llff - flower - 0~140 styles
+- [ ] llff - fern - 0~140 styles
+- [ ] llff - orchids - 0~140 styles
+- [ ] llff - fortress - 0~140 styles
+- [ ] llff - leaves - 0~140 styles
+- [ ] llff - room - 0~140 styles
+
 ## Quick start
 
+
 ### Install environment
-```bash
-. ./create_env.sh
+
+```commandline
+conda create -n arf python=3.8
+conda activate arf
+
+# install torch
+pip install torch==1.13.0+cu117 torchvision==0.14.0+cu117 torchaudio==0.13.0 --extra-index-url https://download.pytorch.org/whl/cu117
+
+# install svox2
+# make sure CUDA >= 11
+git clone git@github.com:sxyu/svox2.git
+cd svox2
+pip install -e . --verbose
+
+# install other packages
+pip install -r requirements.txt
 ```
-### Download data
-```bash
-. ./download_data.sh
-```
+
 ### Optimize artistic radiance fields
 ```bash
 cd opt && . ./try_{llff/tnt/custom}.sh [scene_name] [style_id]
