@@ -19,12 +19,12 @@ Citation:
 
 - [x] llff - trex - 0~140 styles
 - [x] llff - horns - 0~140 styles
-- [ ] llff - flower - 0~140 styles
-- [ ] llff - fern - 0~140 styles
-- [ ] llff - orchids - 0~140 styles
-- [ ] llff - fortress - 0~140 styles
-- [ ] llff - leaves - 0~140 styles
-- [ ] llff - room - 0~140 styles
+- [x] llff - flower - 0~140 styles
+- [x] llff - fern - 0~140 styles
+- [x] llff - orchids - 0~140 styles
+- [x] llff - fortress - 0~140 styles
+- [x] llff - leaves - 0~140 styles
+- [x] llff - room - 0~140 styles
 
 ## Quick start
 
