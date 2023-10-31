@@ -1,4 +1,5 @@
 import os
+from tqdm import tqdm
 
 
 if __name__ == "__main__":
@@ -28,7 +29,7 @@ if __name__ == "__main__":
         "opt_frozen.py",
         "test_renders_path.mp4",
     ]
-    for subfolder in subfolders:
+    for subfolder in tqdm(subfolders):
         for delete_file in delete_file_list:
             delete_file_path = os.path.join(subfolder, delete_file)
             if os.path.exists(delete_file_path):
